@@ -1,8 +1,8 @@
 # WTF React Setup
 
-Name: Morufat Lamidi Alade
-Submission Requirement: GitHub link + README.md with answers
-Deadline: 10:30 AM
+- Name: Morufat Lamidi Alade
+- Submission Requirement: GitHub link + README.md with answers
+- Deadline: 10:30 AM
 
 ## Table of Contents
 
