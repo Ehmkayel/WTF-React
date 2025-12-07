@@ -19,8 +19,7 @@ This README provides:
 
 - An explanation of npm
 - package.json
-- A description of Vite and
-- Steps to run and develop the
+- A description of Vite 
 
 ## Answers
 
