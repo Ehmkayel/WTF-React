@@ -64,6 +64,7 @@ const Courses = () => {
 
                   <Button
                     variant="primary"
+                    size="sm"
                     rightSection={<FaArrowRight color="white" />}
                     onClick={() => console.log(`Enroll in ${course.title}`)}
                   >
