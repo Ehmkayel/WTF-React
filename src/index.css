@@ -1,18 +1,42 @@
-@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap");
 :root {
   --primary-color: #704fe6;
   --secondary-color: #ffd25d;
+  --accent-blue-color: #17254e;
   --text-color: #0e2a46;
   --text-light: #333931;
+  --rating-stars-color: #fc6441;
+  --rating-value-color: #4D5756;
   --border-color: #f4f5f8;
   --background-color: #ffffff;
+  --category-color: #17254e;
+  --accent-purple-color: #e9e2ff;
   --radius-md: 8px;
-  --radius-smd: 10px
+  --radius-smd: 10px;
   --radius-lg: 16px;
   --radius-xl: 20px;
-  font-family: "Epilogue", sans-serif;
+  --font-top: "Sora", sans-serif;
+  --font-main: "Epilogue", sans-serif;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root,
+.app-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -27,15 +51,6 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-main);
-  line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--background-color);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 img {
@@ -55,16 +70,7 @@ a {
   text-decoration: none;
 }
 
-.container {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
+.title {
+  font-weight: 700;
+  font-size: 45px;
 }
-
-body {
-  display: flex;
-  min-height: 100vh;
-  color: var(--text-color);
-  background-color: var(--background-color)
-}
-

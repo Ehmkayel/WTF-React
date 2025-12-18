@@ -1,0 +1,98 @@
+.top-downloader {
+  background-color: var(--accent-blue-color);
+  font-family: var(--font-top);
+  height: auto;
+  padding: clamp(2px, 0.6vw, 3px) clamp(20px, 5vw, 100px); 
+  min-height: 50px; 
+  display: flex;
+  align-items: center;
+}
+
+.top-downloader-content-wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  gap: clamp(20px, 4vw, 153px);
+  flex-wrap: wrap; 
+}
+
+.top-downloader-infobar {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 1.5vw, 20px);
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.top-dowloadbar-info {
+  display: flex;
+  align-items: center;
+  color: var(--background-color);
+  gap: clamp(6px, 0.8vw, 12px);
+  font-size: clamp(0.7rem, 0.9vw, 1rem);
+  flex-wrap: wrap; 
+  white-space: nowrap;
+}
+
+.social-media-icons {
+  background-color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  padding: clamp(8px, 1vw, 10px) clamp(12px, 1.5vw, 20px);
+  gap: clamp(12px, 0.8vw, 20px);
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .top-downloader {
+    padding: 10px 15px;
+  }
+  
+  .top-downloader-content-wrapper {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .top-downloader-infobar {
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+    order: 2; 
+  }
+  
+  .social-media-icons {
+    order: 1; 
+    padding: 8px 16px;
+    justify-content: center;
+  }
+  
+  .top-dowloadbar-info {
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .top-downloader-infobar {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .top-dowloadbar-info {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.75rem;
+  }
+  
+  .social-media-icons {
+    width: 100%; 
+    justify-content: center;
+    padding: 8px;
+  }
+}
