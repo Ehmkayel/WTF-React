@@ -1,0 +1,202 @@
+.header {
+  background-color: var(--background-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: clamp(2px, 0.6vw, 3px) clamp(20px, 5vw, 100px); 
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.logo-image {
+  height: clamp(2rem, 3vw, 3rem);
+  width: auto;
+}
+
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.1rem, 2vw, 2rem);
+  margin: 0 auto;
+}
+
+.nav-link {
+  color: var(--text-color);
+  font-family: var(--font-top);
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+
+/* Create Account Button */
+.create-account-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: clamp(0.5rem, 1vw, 0.75rem) clamp(1rem, 1.5vw, 1.5rem);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.create-account-btn:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    gap: 1rem;
+  }
+  
+
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    gap: 1rem;
+  }
+  
+  .menu-toggle {
+    display: block;
+    position: relative;
+    z-index: 1001;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--background-color);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 5rem 1.5rem 2rem;
+    margin: 0;
+    gap: 1rem;
+    transition: left 0.3s ease;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow-y: auto;
+  }
+  
+  .nav-links.active {
+    left: 0;
+  }
+  
+  .nav-link {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+    border: 2px solid transparent; 
+    border-radius: var(--radius-sm);
+    text-align: left;
+  }
+  
+  .nav-link.active {
+    border-color: var(--primary-color);
+    background-color: rgba(52, 152, 219, 0.1);
+  }
+  
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .create-account-btn {
+    order: 2;
+    z-index: 1001;
+    position: relative;
+  }
+  
+  .menu-toggle {
+    order: 1;
+  }
+  
+  /* Overlay when menu is open */
+  .nav-links::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .nav-links.active::before {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 4px 15px;
+  }
+  
+  .logo-image {
+    height: 2rem;
+  }
+  
+  .create-account-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .nav-links {
+    width: 85%;
+    padding: 4rem 1rem 2rem;
+  }
+}

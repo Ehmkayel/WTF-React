@@ -1,0 +1,163 @@
+.hero {
+  background-color: white;
+  min-height: 60vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  min-height: 60vh;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding-left: clamp(20px, 5vw, 100px);
+  max-width: 892px;
+  width: 100%;
+}
+
+.hero__subtitle {
+  font-size: 17px;
+  font-family: var(--font-top);
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+.hero__title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 72px;
+  color: var(--accent-blue-color);
+}
+
+.hero__bg-image {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero__bg-image--notebook {
+  bottom: 0;
+  left: 0;
+}
+
+.hero__bg-image--squared {
+  bottom: 45%;
+  right: 12%;
+  top: 22%;
+  width: 30%;
+  overflow: hidden;
+}
+
+.hero__description {
+  font-size: 15px;
+  line-height: 28.5px;
+  margin-bottom: 1.5em;
+  color: var(--text-color);
+  font-family: var(--font-top);
+  opacity: 0.9;
+  width: 100%;
+  max-width: 487.67px;
+}
+
+.hero__illustration {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.hero__decoration--twig {
+  position: absolute;
+  bottom: 0;
+  left: 35%;
+  width: 20%;
+}
+
+.hero__decoration--users {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  width: 15%;
+  z-index: 6;
+}
+
+@media (max-width: 1500px) {
+  .hero__decoration--twig {
+    bottom: 6%;
+    left: 35%;
+    width: 40%;
+  }
+
+  .hero__decoration--users {
+    bottom: 30%;
+    left: 50%;
+    width: 15%;
+    z-index: 6;
+  }
+
+  .hero__illustration {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero__decoration--twig {
+    bottom: 6%;
+    left: 35%;
+    width: 30%;
+  }
+
+  .hero__illustration {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero-content {
+    max-width: 650px;
+    width: 100%;
+  }
+
+  .hero__bg-image--squared {
+    right: 15%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    margin-top: clamp(2rem, 6vh, 4rem);
+  }
+
+  .hero__illustration {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container {
+    flex-direction: column-reverse;
+  }
+
+  .hero__title {
+    font-size: clamp(1.8rem, 4vw, 2.2rem);
+  }
+
+  .hero__decoration--twig {
+    display: none;
+  }
+
+  .hero__subtitle,
+  .hero__description {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+  }
+}
