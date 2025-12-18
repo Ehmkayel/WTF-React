@@ -20,12 +20,12 @@ const Courses = () => {
         <div className="courses-grid">
           {CoursesData.map((course) => (
             <div key={course.id} className="course-card">
-              <div>
-                <div className="course-header">
-                  <img src={course.image} />
-                  <span className="course-category">{course.category}</span>
-                </div>
+              <div className="course-header">
+                <img src={course.image} />
+                <span className="course-category">{course.category}</span>
+              </div>
 
+              <div className="course-content">
                 <div className="course-rating">
                   <div>
                     <span className="rating-stars">★★★★★</span>
@@ -34,9 +34,6 @@ const Courses = () => {
 
                   <span className="rating-price">{course.price}</span>
                 </div>
-              </div>
-
-              <div className="course-content">
                 <h3 className="course-title">{course.title}</h3>
 
                 <div className="course-info">
@@ -67,7 +64,7 @@ const Courses = () => {
 
                   <Button
                     variant="primary"
-                    rightSection={<FaArrowRight color="white"/>}
+                    rightSection={<FaArrowRight color="white" />}
                     onClick={() => console.log(`Enroll in ${course.title}`)}
                   >
                     Enroll Now
