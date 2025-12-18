@@ -9,7 +9,8 @@
 1. [WTF React Setup](#wtf-react-setup)
 2. [Overview](#overview)
 3. [Answers](#answers)
-4. [Get In Touch](#get-in-touch)
+4. [Summary Assignment](#summary-assignment)
+5. [Get In Touch](#get-in-touch)
 
 ## Overview
 
@@ -50,6 +51,10 @@ It also helps to keep the project organized and allows anyone who downloads your
 
 - Vite
   Vite is a modern build tool and development server designed to make React and other frontend frameworks faster and smoother to use. It is lightweight in nature.
+
+## Summary Assignment
+
+_Link to Summary Assignment_ : [Summary](./ReactSummary.md)
 
 ## Get in Touch
 
